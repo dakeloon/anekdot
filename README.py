@@ -25,6 +25,7 @@ def hello(message):
 def jokes(message):
     if message.text.lower() in "123456789":
         bot.send_message(message.chat.id, list_of_jokes[0])
+        del list_of_jokes[0]
     else:
         bot.send_message(message.chat.id, "Не знаешь что такое цифры?")
 
